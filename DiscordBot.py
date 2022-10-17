@@ -1,7 +1,7 @@
 from discord.ext import commands
 import discord,csv,requests,time,os
 
-token='MTAyOTUwOTI2MDU1NzcwMTIwMQ.GWARPB.yrDs4wfpy8FainKWOGu24fGR1qY-v6SrhmQL1Q'
+token=''
 
 # manutenção/exclusão do arquivo para evitar acumulo desnecessario de arquivos .csv
 def manutencao_tabela(file):
@@ -15,10 +15,6 @@ bot=commands.Bot(command_prefix="!",intents=discord.Intents.all())
 bot.event
 async def on_ready():
     print("O bot esta online")
-
-@bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
     
 @bot.command()
 async def check(ctx,arg):
